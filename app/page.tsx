@@ -1,3 +1,5 @@
+import UI from './ui';
+
 export default function Page() {
-  return <main>dropbox</main>;
+  return <UI />;
 }

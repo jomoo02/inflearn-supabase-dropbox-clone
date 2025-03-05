@@ -8,9 +8,9 @@ export default function Logo() {
       <Image
         src="/images/dropbox_icon.webp"
         alt="Mini Dropbox Logo"
-        width={50}
+        width={32}
         height={30}
-        className="!w-8 !h-auto"
+        style={{ width: 32, height: 30 }}
       />
       <span className="text-xl font-bold">Minibox</span>
     </div>

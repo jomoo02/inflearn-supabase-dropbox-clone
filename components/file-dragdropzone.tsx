@@ -1,7 +1,7 @@
 'use client';
 
-import { Button, Spinner } from '@material-tailwind/react';
-import { useCallback, useRef } from 'react';
+import { Spinner } from '@material-tailwind/react';
+import { useCallback } from 'react';
 import { uploadFile } from 'actions/storage-actions';
 import { useMutation } from '@tanstack/react-query';
 import { queryClient } from 'config/react-query-client-provider';

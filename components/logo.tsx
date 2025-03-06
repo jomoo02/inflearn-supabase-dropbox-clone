@@ -11,6 +11,7 @@ export default function Logo() {
         width={32}
         height={30}
         style={{ width: 32, height: 30 }}
+        priority
       />
       <span className="text-xl font-bold">Minibox</span>
     </div>

@@ -6,6 +6,7 @@ import { getImageUrl } from 'utils/supabase/storage';
 import { useMutation } from '@tanstack/react-query';
 import { queryClient } from 'config/react-query-client-provider';
 import { deleteFile } from 'actions/storage-actions';
+import { formatDate } from 'utils/foramt-data';
 
 export default function DropboxImage({ image }) {
   const deleteFileMutaiton = useMutation({
@@ -30,7 +31,12 @@ export default function DropboxImage({ image }) {
           />
         </div>
       </div>
-      <div>{image.name}</div>
+      <div className="grid gap-y-1">
+        <div className="text-blue-gray-800 font-medium">{image.name}</div>
+        <div className="text-xs text-blue-gray-300">
+          updated: {formatDate(image.updated_at)}
+        </div>
+      </div>
       <div className="absolute top-4 right-4">
         <IconButton
           onClick={() => {

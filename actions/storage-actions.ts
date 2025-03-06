@@ -31,9 +31,13 @@ export async function searchFiles(search: string = '') {
   const supabase = await createServerSupabaseClient();
   const { data, error } = await supabase.storage
     .from(process.env.NEXT_PUBLIC_STORAGE_BUCKET)
-    .list(null, { search, offset: 0 });
+    .list(null);
 
   handleError(error);
+
+  if (search) {
+    return data.filter((file) => file.name.includes(search));
+  }
 
   return data;
 }

@@ -9,6 +9,7 @@ import { deleteFile } from 'actions/storage-actions';
 import { formatDate } from 'utils/foramt-data';
 
 export default function DropboxImage({ image }) {
+  console.log(image);
   const deleteFileMutaiton = useMutation({
     mutationFn: deleteFile,
     onSuccess: () => {
